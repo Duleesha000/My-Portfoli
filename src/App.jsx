@@ -103,7 +103,15 @@ export default function App() {
               >
                 GitHub
               </a>
-
+              
+              <a
+                 className="btn ghost"
+                 href="/My-Portfoli/resume.pdf"
+                 target="_blank"
+                 rel="noreferrer"
+        >
+               Resume
+              </a>
               <a
                 className="btn ghost"
                 href="https://www.linkedin.com/in/nimesh-makevitage-b4212b2a7/"
