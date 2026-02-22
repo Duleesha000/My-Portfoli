@@ -8,6 +8,8 @@ const projects = [
     desc:
       "A full e-commerce system with both front-end and back-end features, focusing on product browsing and user interactions.",
     repo: "https://github.com/Duleesha000/E-commerce_Mobile_web-site_font--end_and_back-end",
+    demo: "", // optional: add live demo link later
+    highlights: ["Responsive UI & user flow", "Clean structure and reusable components"],
   },
   {
     title: "Smart Water Bottle",
@@ -15,6 +17,8 @@ const projects = [
     desc:
       "A smart concept project to support tracking and managing water intake with a web-based approach.",
     repo: "https://github.com/Duleesha000/Smart_water_bottel",
+    demo: "",
+    highlights: ["Practical IoT-inspired concept", "Simple UI for tracking / interaction"],
   },
   {
     title: "Voting Web Site",
@@ -22,6 +26,8 @@ const projects = [
     desc:
       "An online voting website built to demonstrate user flows and a simple voting experience.",
     repo: "https://github.com/Duleesha000/Voting_web_site",
+    demo: "",
+    highlights: ["User-friendly voting flow", "Clear navigation and layout"],
   },
   {
     title: "E-store Pexplanet",
@@ -29,6 +35,8 @@ const projects = [
     desc:
       "An online store style website focused on clean layout, structure, and responsive UI design.",
     repo: "https://github.com/Duleesha000/E-store_Pexplanet",
+    demo: "",
+    highlights: ["Responsive layout", "Clean product-style page structure"],
   },
   {
     title: "Web Page for Store",
@@ -36,6 +44,8 @@ const projects = [
     desc:
       "A store landing page with a modern structure and sections for showcasing products or services.",
     repo: "https://github.com/Duleesha000/Web-page-for--store",
+    demo: "",
+    highlights: ["Modern landing page sections", "Readable layout & spacing"],
   },
 ];
 
@@ -56,6 +66,7 @@ export default function App() {
           </a>
 
           <div className="navLinks">
+            <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
@@ -75,8 +86,8 @@ export default function App() {
             </p>
 
             <p className="intro">
-              I build modern web applications and practical software projects.
-              I enjoy working on clean UI, backend APIs, and real-world solutions.
+              I build modern web applications and practical software projects. I enjoy
+              working on clean UI, backend APIs, and real-world solutions.
             </p>
 
             <div className="ctaRow">
@@ -93,19 +104,24 @@ export default function App() {
                 GitHub
               </a>
 
+              <a
+                className="btn ghost"
+                href="https://www.linkedin.com/in/nimesh-makevitage-b4212b2a7/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+
               <a className="btn ghost" href="#contact">
                 Contact
               </a>
             </div>
           </div>
 
-          {/* ✅ PHOTO HERO CARD */}
+          {/* PHOTO HERO CARD */}
           <div className="heroCard photoCard">
-            <img
-              src={profile}
-              alt="Nimesh Makevitage"
-              className="profileImg"
-            />
+            <img src={profile} alt="Nimesh Makevitage" className="profileImg" />
 
             <div className="photoInfo">
               <p className="photoName">Nimesh Makevitage</p>
@@ -122,11 +138,23 @@ export default function App() {
       </header>
 
       <main className="main">
+        {/* ABOUT */}
+        <section className="section" id="about">
+          <div className="sectionHeader">
+            <h2>About</h2>
+            <p>
+              I’m a fourth-year Software Engineering student at Deakin University. I’m
+              interested in building full-stack applications (React + APIs) and exploring
+              IoT-based systems. I like creating clean, reliable software that solves real problems.
+            </p>
+          </div>
+        </section>
+
         {/* PROJECTS */}
         <section className="section" id="projects">
           <div className="sectionHeader">
             <h2>Projects</h2>
-            <p>Some of my recent work from GitHub.</p>
+            <p>Selected projects from my GitHub.</p>
           </div>
 
           <div className="grid">
@@ -145,6 +173,13 @@ export default function App() {
 
                 <p className="cardDesc">{p.desc}</p>
 
+                {/* Highlights */}
+                <ul className="bullets">
+                  {p.highlights.map((h) => (
+                    <li key={h}>{h}</li>
+                  ))}
+                </ul>
+
                 <div className="cardActions">
                   <a
                     className="btn small ghost"
@@ -152,8 +187,21 @@ export default function App() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    View Repo
+                    Repo
                   </a>
+
+                  {p.demo ? (
+                    <a
+                      className="btn small primary"
+                      href={p.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Live
+                    </a>
+                  ) : (
+                    <span className="btn small ghost disabledBtn">Live (soon)</span>
+                  )}
                 </div>
               </article>
             ))}
@@ -192,6 +240,13 @@ export default function App() {
 
           <div className="contactCard">
             <div className="contactRow">
+              <span className="contactLabel">Email</span>
+              <a className="contactLink" href="mailto:nimeshmakevitage@gmail.com">
+                nimeshmakevitage@gmail.com
+              </a>
+            </div>
+
+            <div className="contactRow">
               <span className="contactLabel">GitHub</span>
               <a
                 className="contactLink"
@@ -204,13 +259,6 @@ export default function App() {
             </div>
 
             <div className="contactRow">
-              <span className="contactLabel">Email</span>
-              <a className="contactLink" href="mailto:nimeshmakevitage@gmail.com">
-                nimeshmakevitage@gmail.com
-              </a>
-            </div>
-
-            <div className="contactRow">
               <span className="contactLabel">LinkedIn</span>
               <a
                 className="contactLink"
@@ -218,11 +266,14 @@ export default function App() {
                 target="_blank"
                 rel="noreferrer"
               >
-                linkedin.com/in/nimeshmakevitage/
+                linkedin.com/in/nimesh-makevitage
               </a>
             </div>
 
-            
+            <div className="contactRow">
+              <span className="contactLabel">Location</span>
+              <span className="contactValue">Melbourne, Australia</span>
+            </div>
           </div>
         </section>
       </main>
