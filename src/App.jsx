@@ -106,7 +106,7 @@ export default function App() {
               
               <a
   className="btn ghost"
-  href="/My-Portfolio/resume.pdf"
+  href=""./resume.pdf""
   target="_blank"
   rel="noopener noreferrer"
 >
