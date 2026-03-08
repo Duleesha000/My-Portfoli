@@ -105,12 +105,13 @@ export default function App() {
               </a>
               
               <a
-                 className="btn ghost"
-                 href="/My-Portfoli/resume.pdf"
-                 target="_blank"
-                 rel="noreferrer"
-        >
-               Resume
+  className="btn ghost"
+  href="/My-Portfolio/resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Resume
+
               </a>
               <a
                 className="btn ghost"
